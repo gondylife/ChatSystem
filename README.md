@@ -1,3 +1,1 @@
-# ChatSystem
-
-a [Sails](http://sailsjs.org) application
+a Chat application built using [Sails](http://sailsjs.org)
