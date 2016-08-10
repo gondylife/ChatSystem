@@ -7,7 +7,7 @@ socketApp.controller('ChatController', ['$http', '$log', '$scope', function($htt
 
   $scope.getAllMessages = function() {
     io.socket.get('/chat/');
-    $http.get($scope.baseUrl+'/chat/')
+    $http.get($scope.baseUrl + '/chat/')
       .success(function(success_data) {
         $scope.chatList = success_data;
         $log.info(success_data);
@@ -28,8 +28,7 @@ socketApp.controller('ChatController', ['$http', '$log', '$scope', function($htt
 
   $scope.sendMsg = function() {
     $log.info($scope.chatMessage);
-    io.socket.post('/chat/',{user:$scope.chatUser,message:
-    $scope.chatMessage});
+    io.socket.post('/chat/', {user: $scope.chatUser, message: $scope.chatMessage});
     $scope.chatMessage = "";
   };
 }]);
